@@ -1,11 +1,11 @@
 const entities = {
   path: 'src',
   files: [{
-      template: require('./src/templates/entities.template'),
+      template: require('./template'),
       shouldHaveOptionNameInFileName: true,
       extension: '.js'
     }, {
-      template: require('./src/templates/entities.csstemplate'),
+      template: require('./template'),
       shouldHaveOptionNameInFileName: false,
       extension: '.css'
     }
