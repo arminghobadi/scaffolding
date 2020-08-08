@@ -2,25 +2,18 @@ const entities = {
   path: 'src',
   files: [{
       template: require('./template'),
-      shouldHaveOptionNameInFileName: true,
-      extension: '.js'
+      name: name => `${name}.js`,
     }, {
       template: require('./template'),
-      shouldHaveOptionNameInFileName: false,
-      extension: '.css'
+      name: name => `${name}.css`,
+      shouldExport: false
     }
   ], 
 }
 
 
 
-module.exports = {
-  shouldAutomaticallyCreateDirectory: false,
-  shouldOverrideFileIfExists: false,
-  fileNamePattern: `?????????`,
-  options: {
-    entities,
-    e: entities
-  }
-
-}
+module.exports = async () => ({
+  entities,
+  e: entities
+})
